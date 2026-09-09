@@ -17,7 +17,7 @@ export class AuthService {
     return this.issue(user);
   }
   private issue(user: any) {
-    const payload = { sub:String(user._id), email:user.email, role:user.role, name:user.name };
+    const payload = { sub:String(user._id), email:user.email, role:user.role, name:user.name, phone:user.phone || '' };
     return { accessToken:this.jwt.sign(payload), user:{ id:String(user._id), name:user.name, email:user.email, role:user.role, phone:user.phone } };
   }
 }
