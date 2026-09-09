@@ -9,12 +9,13 @@ import { PaymentsModule } from './payments/payments.module';
 import { RentalsModule } from './rentals/rentals.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ServicesModule } from './services/services.module';
+import { SessionsModule } from './sessions/sessions.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/gk_academy'),
-    AuthModule, UsersModule, PlansModule, SubscriptionsModule, PaymentsModule, RentalsModule, DashboardModule, ServicesModule,
+    AuthModule, UsersModule, PlansModule, SubscriptionsModule, PaymentsModule, RentalsModule, DashboardModule, ServicesModule, SessionsModule,
   ],
 })
 export class AppModule {}

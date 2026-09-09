@@ -1,0 +1,71 @@
+{
+  "update": "plans",
+  "updates": [
+    {
+      "q": { "type": "PERSONALIZADO" },
+      "u": {
+        "$set": {
+          "name": "Plan Personalizado",
+          "type": "PERSONALIZADO",
+          "price": 320000,
+          "currency": "COP",
+          "durationDays": 30,
+          "sessionsPerMonth": 8,
+          "features": [
+            "Entrenamiento individual",
+            "Trabajo técnico específico para el arquero",
+            "Seguimiento personalizado",
+            "Preparación física y técnica"
+          ],
+          "active": true,
+          "description": "Entrenamiento individual para arqueros con un licenciado en educación física y preparador de arqueros."
+        }
+      },
+      "upsert": true
+    },
+    {
+      "q": { "type": "SEMIPERSONALIZADO" },
+      "u": {
+        "$set": {
+          "name": "Plan Semipersonalizado",
+          "type": "SEMIPERSONALIZADO",
+          "price": 190000,
+          "currency": "COP",
+          "durationDays": 30,
+          "sessionsPerMonth": 8,
+          "features": [
+            "Entrenamiento para grupos de 2 o 3 personas",
+            "Correcciones técnicas individuales",
+            "Trabajo técnico y físico",
+            "Seguimiento del progreso"
+          ],
+          "active": true,
+          "description": "Entrenamiento para grupos reducidos de 2 o 3 arqueros con un licenciado en educación física y preparador de arqueros."
+        }
+      },
+      "upsert": true
+    },
+    {
+      "q": { "type": "GRUPAL" },
+      "u": {
+        "$set": {
+          "name": "Plan Grupal",
+          "type": "GRUPAL",
+          "price": 120000,
+          "currency": "COP",
+          "durationDays": 30,
+          "sessionsPerMonth": 8,
+          "features": [
+            "Entrenamiento para grupos de 4 o más personas",
+            "Trabajo técnico de arqueros",
+            "Preparación física específica",
+            "Acompañamiento de un preparador de arqueros"
+          ],
+          "active": true,
+          "description": "Entrenamiento grupal para 4 o más arqueros dirigido por un licenciado en educación física y preparador de arqueros."
+        }
+      },
+      "upsert": true
+    }
+  ]
+}
